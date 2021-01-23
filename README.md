@@ -10,3 +10,8 @@ This weather Dashboard will help you with the current day forecast and the 5-day
 ##contributors Michael Swigart, Mahesh Rodrigo Teacher, Tim Lukens TA, Jeremy Collins my tutor.
 
 I thank all of the people who helped me do this because I couldn't have done it on my own.
+
+
+https://github.com/Michaelswigart/I-see-weather-on-the-horzion
+
+https://michaelswigart.github.io/I-see-weather-on-the-horzion/
