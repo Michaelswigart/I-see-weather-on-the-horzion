@@ -67,8 +67,12 @@ searchButton.click(function () {
                 url: urlUV,
                 method: "GET"
             }).then(function (response) {
-
-                var currentUV = currentTemp.append("<p>" + "UV Index: " + response.value + "</p>").addClass("card-text");
+                 if (response.value > 5){
+                   var currentUV = currentTemp.append(`<p class="severe" >UV Index: ${response.value}</p>`).addClass("card-text");  
+                 } else {
+                    var currentUV = currentTemp.append(`<p class="moderate" >UV Index: ${response.value}</p>`).addClass("card-text"); 
+                 }
+                
                 currentUV.addClass("UV");
                 currentTemp.append(currentUV);
                 // currentUV.append("UV Index: " + response.value);
@@ -103,12 +107,12 @@ searchButton.click(function () {
 
       
       // Convert the temp to fahrenheit
-      var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+    //   var tempF = (response.main.temp - 273.15) * 1.80 + 32;
 
-      // add temp content to html
+    //   // add temp content to html
    
 
-      // Log the data in the console as well
-      console.log("Wind Speed: " + response.wind.speed);
-      console.log("Humidity: " + response.main.humidity);
-      console.log("Temperature (F): " + tempF);
+    //   // Log the data in the console as well
+    //   console.log("Wind Speed: " + response.wind.speed);
+    //   console.log("Humidity: " + response.main.humidity);
+    //   console.log("Temperature (F): " + tempF);
